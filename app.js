@@ -23,7 +23,6 @@ const withRetries = ({ attempt, maxRetries }) => async (...args) => {
     let retryCount = 0;
     do {
         try {
-            console.log('args', ...args)
             return await attempt(...args);
         } catch (error) {
             const isLastAttempt = retryCount === maxRetries;
@@ -48,7 +47,7 @@ const attempt = (arg1, arg2) => Math.random() < 0.25 ? Promise.resolve(arg1) : P
 const fetchWithRetry = withRetries({ attempt: attempt, maxRetries: 10 });
 
 fetchWithRetry(fetchSecret()).then((results) => {
-
+    // console.log(results)
     let secret = JSON.parse(results.SecretString)
 
     //caching the secrets
