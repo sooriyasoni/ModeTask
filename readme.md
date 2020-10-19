@@ -15,3 +15,4 @@ For security reasons we will secure this secret in .env file and keep it safe fr
 Install below dependencies:
 npm i dontenv
 npm i axios
+npm i node-cache
