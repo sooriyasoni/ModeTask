@@ -3,7 +3,7 @@ const NodeCache = require('node-cache');
 const cache = new NodeCache();
 const config = {
     method: 'get',
-    url: 'https://run.mocky.io/v3/c8a24ac7-7449-40e0-9c72-59c5517c8901?mocky-delay60000ms',
+    url: 'https://run.mocky.io/v3/c8a24ac7-7449-40e0-9c72-59c5517c8901?mocky-delay=60000ms',
     headers: {}
 };
 require('dotenv').config();
